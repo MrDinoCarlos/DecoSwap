@@ -1,0 +1,69 @@
+name: DecoSwap
+version: '${version}'
+main: es.mrdino.decoswap.DecoSwapPlugin
+description: DecoSwap 0.1.x — reusable world decorations with exact selection and safe rollback.
+website: https://mrdino.es/
+api-version: '1.21.4'
+authors: [MrDinoCarlos]
+softdepend: [EasyArmorStands]
+commands:
+  decoswap:
+    description: Manage DecoSwap.
+    usage: /decoswap help
+    aliases: [ds]
+permissions:
+  decoswap.use: {default: op}
+  decoswap.help: {default: op}
+  decoswap.wand: {default: op}
+  decoswap.select: {default: op}
+  decoswap.anchor: {default: op}
+  decoswap.decoration.create: {default: op}
+  decoswap.decoration.save: {default: op}
+  decoswap.decoration.update: {default: op}
+  decoswap.decoration.delete: {default: op}
+  decoswap.decoration.pack: {default: op}
+  decoswap.decoration.deploy: {default: op}
+  decoswap.decoration.restore: {default: op}
+  decoswap.decoration.info: {default: op}
+  decoswap.decoration.changes: {default: op}
+  decoswap.group.create: {default: op}
+  decoswap.group.edit: {default: op}
+  decoswap.group.delete: {default: op}
+  decoswap.group.deploy: {default: op}
+  decoswap.group.restore: {default: op}
+  decoswap.capture.inventory: {default: op}
+  decoswap.capture.commandblock: {default: op}
+  decoswap.capture.dangerous: {default: op}
+  decoswap.deploy.force: {default: op}
+  decoswap.restore.force: {default: op}
+  decoswap.recovery: {default: op}
+  decoswap.reload: {default: op}
+  decoswap.admin:
+    default: op
+    children:
+      decoswap.use: true
+      decoswap.help: true
+      decoswap.wand: true
+      decoswap.select: true
+      decoswap.anchor: true
+      decoswap.decoration.create: true
+      decoswap.decoration.save: true
+      decoswap.decoration.update: true
+      decoswap.decoration.delete: true
+      decoswap.decoration.pack: true
+      decoswap.decoration.deploy: true
+      decoswap.decoration.restore: true
+      decoswap.decoration.info: true
+      decoswap.decoration.changes: true
+      decoswap.group.create: true
+      decoswap.group.edit: true
+      decoswap.group.delete: true
+      decoswap.group.deploy: true
+      decoswap.group.restore: true
+      decoswap.capture.inventory: true
+      decoswap.capture.commandblock: true
+      decoswap.capture.dangerous: true
+      decoswap.deploy.force: true
+      decoswap.restore.force: true
+      decoswap.recovery: true
+      decoswap.reload: true

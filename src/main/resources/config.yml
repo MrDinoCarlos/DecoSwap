@@ -1,0 +1,91 @@
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃                            DecoSwap                              ┃
+# ┃       Exact decorations  •  Safe deployment  •  Easy rollback    ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+# Plugin configuration
+#
+# Version: 0.1.3
+# Author: MrDinoCarlos (Mr.Dino)
+# Website: https://mrdino.es/
+# GitHub: https://github.com/MrDinoCarlos
+# Wiki: https://github.com/MrDinoCarlos/DecoSwap/wiki
+#
+# New settings are merged automatically during updates. Existing values that
+# you changed are preserved. A dated .bak file is created before a merge.
+# ============================================================================
+config-version: 2
+plugin-version: 0.1.3
+
+# Language and player locale handling.
+language:
+  default: en_US
+  fallback: en_US
+  auto-detect-client-locale: true
+
+# The selector and limits used by exact and region selections.
+selection:
+  selector-material: BLAZE_ROD
+  max-region-volume: 1000000
+  max-blocks: 500000
+  max-entities: 10000
+
+# Temporary editor visuals. These are Display Entities, never particles.
+visuals:
+  enabled: true
+  block-outline-limit: 200
+  entity-outline-limit: 200
+  detail-radius: 48
+  region-outline: true
+  anchor-gizmo: true
+  labels: true
+  line-material: LIGHT_BLUE_STAINED_GLASS
+  entity-line-material: LIME_STAINED_GLASS
+  changed-line-material: RED_STAINED_GLASS
+  anchor-material: GOLD_BLOCK
+
+# Per-tick budgets. World access remains on the server thread.
+operations:
+  blocks-per-tick: 2500
+  entities-per-tick: 100
+  save-async: true
+
+# Snapshot and deployment safety policies.
+snapshots:
+  archive-completed: true
+conflicts:
+  restore-policy: ABORT
+deployments:
+  allow-overlap: false
+  allow-duplicate-home: false
+
+# Group rollback and capture behavior.
+groups:
+  rollback-on-failure: true
+entities:
+  capture-non-persistent: false
+  capture-scoreboard-tags: true
+blocks:
+  capture-inventories: true
+  capture-pdc: true
+
+# Privileged data is disabled or permission-gated by default.
+dangerous-data:
+  command-blocks: false
+  structure-blocks: false
+  spawners: true
+
+# Automatic backups for templates and migrations.
+backups:
+  enabled: true
+  keep: 10
+  before-update: true
+  before-delete: true
+  before-migration: true
+
+# Optional integrations and diagnostics.
+integrations:
+  easyarmorstands: true
+logging:
+  verbose: false
+sounds:
+  enabled: true
